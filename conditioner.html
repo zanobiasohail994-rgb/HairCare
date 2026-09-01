@@ -384,8 +384,7 @@
       onclick="AddtoCart('Hair Care Conditioner',3150,'conditioner6.webp')">Add to Cart</button>
     </div>
    </div>
-   
-    <div class="row g-4">
+
    <div class="col-md-4">
     <div class="card text-center p-4 h-100">
    <img src="conditioner 4.webp" alt="Customer" class="card-img-top img-fluid">
@@ -490,11 +489,6 @@
 
     localStorage.setItem("cart", 
       JSON.stringify(cart));
-
-       function removeProduct(ProductId) {
-        document.getElementById(ProductId).remove();
-    }
-   
 
       alert("Product added to cart!")
   }
