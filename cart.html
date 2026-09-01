@@ -1,0 +1,270 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css" integrity="sha512-QeR2VH+lsBE5LSAe1Q5EnTBbe7XTBubt8dG93Y7gidSgdMCr8nVqKcfKAMyN96SV8KDbZVTDXChatu5G2KQGzg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<style>
+    .cart-card{
+        border: none;
+        border-radius: 15px;
+        background-color: white;
+        padding: 10px;
+        margin-bottom: 20px;
+        box-shadow: 0 4px 12px  rgba(0, 0, 0, 0.10);
+    }
+     .cart-card img{
+        width: 120px;
+        height: 120px;
+        object-fit: cover;
+        border-radius: 12px;
+    }
+    .cart-card .card-title{
+        font-weight: bold;
+        color: #8f3f56;
+    }
+    .cart-card .btn-ontline-secondary{
+        border-radius: 8px;
+    }
+    .Order Summary{
+      border: none;
+      border-radius: 15px;
+      padding: 25px;
+      background-color: #fff5f7;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.10);
+    }
+    .Order Summary h4{
+     color: #8f3f56;
+     font-weight: bold;
+    }
+    .Order Summary .Total{
+    font-size: 20px;
+    font-weight: bold;
+    color: #8f3f56;
+    }
+    .checkout-btn{
+        width: 100%;
+        border: none;
+        border-radius: 25px;
+        padding: 10px;
+        background-color: #b04a68;
+        color: white;
+    }
+    .checkout-btn:hover{
+        background-color: #8f3f56;
+    }
+</style>
+<body>
+    
+<div class="container my-5">
+
+   <h2 class="text-center mb-4">My Cart</h2>
+
+   <div class="card cart-card md-3">
+  <div class="row g-0 align-items-center">
+
+    <!-- Shampoo -->
+    <div class="col-md-3" id="Shampoo">
+        <!-- card-img -->
+        <img src="Shampoo.webp" class="img-fluid rounded-start" alt="Shampoo">
+    </div>
+
+    <!-- Product details -->
+    <div class="col-md-6">
+        <div class="card-body">
+            <h5 class="card-title">Hair Care Shampoo</h5>
+            <p class="card-text">Price: Rs. 1,250</p>
+
+            <!-- Quantity -->
+            <button onclick="decreaseQty()" 
+            class="btn btn-outline-secondary btn-sm">-</button>
+            <span id="quanlity">1</span>
+            <button onclick="increaseQty()"
+             class="btn btn-outline-secondary btn-sm">+</button>
+        </div>
+    </div>
+
+    <!-- Remove & Total -->
+    <div class="col-md-3 text-center">
+        <p class="fw-bold">Rs. 1,250</p>
+        <button class="btn btn-outline-danger btn-sm"
+        onclick="removeProduct('Shampoo')">Remove</button>
+    </div>
+
+
+    <!-- Conditioner -->
+    <div class="col-md-3" id="Conditioner">
+        <!-- card-img -->
+        <img src="conditioner2.webp" class="img-fluid rounded-start" alt="Conditioner">
+    </div>
+
+    <!-- Product details -->
+    <div class="col-md-6">
+        <div class="card-body">
+            <h5 class="card-title">Hair Care Conditioner</h5>
+            <p class="card-text">Price: Rs. 2,500</p>
+
+            <!-- Quantity -->
+            <button onclick="decreaseQty()"
+             class="btn btn-outline-secondary btn-sm">-</button>
+            <span id="quanlity">1</span>
+            <button onclick="increaseQty()" 
+            class="btn btn-outline-secondary btn-sm">+</button>
+        </div>
+    </div>
+
+    <!-- Remove & Total -->
+    <div class="col-md-3 text-center">
+        <p class="fw-bold">Rs. 2,500</p>
+        <button class="btn btn-outline-danger btn-sm"
+        onclick="removeProduct('Conditioner')">Remove</button>
+    </div>
+
+ <!-- Shampoo -->
+    <div class="col-md-3" id="Serum">
+        <!-- card-img -->
+        <img src="serum 6.jpg" class="img-fluid rounded-start" alt="Shampoo">
+    </div>
+
+    <!-- Product details -->
+    <div class="col-md-6">
+        <div class="card-body">
+            <h5 class="card-title">Hair Care Serum</h5>
+            <p class="card-text">Price: Rs. 550</p>
+
+            <!-- Quantity -->
+            <button onclick="decreaseQty()"
+             class="btn btn-outline-secondary btn-sm">-</button>
+            <span id="quanlity">1</span>
+            <button onclick="increaseQty()" 
+            class="btn btn-outline-secondary btn-sm">+</button>
+        </div>
+    </div>
+
+    <!-- Remove & Total -->
+    <div class="col-md-3 text-center">
+        <p class="fw-bold">Rs. 550</p>
+        <button class="btn btn-outline-danger btn-sm"
+     onclick="removeProduct('Serum')">Remove</button>
+    </div>
+
+
+    <!-- Conditioner -->
+    <div class="col-md-3" id="Oil">
+        <!-- card-img -->
+        <img src="hairoil4.webp" class="img-fluid rounded-start" alt="Conditioner">
+    </div>
+
+    <!-- Product details -->
+    <div class="col-md-6">
+        <div class="card-body">
+            <h5 class="card-title">Hair Care Oil</h5>
+            <p class="card-text">Price: Rs. 850</p>
+
+            <!-- Quantity -->
+            <button onclick="decreaseQty()"
+             class="btn btn-outline-secondary btn-sm">-</button>
+            <span id="quanlity">1</span>
+            <button onclick="increaseQty()" 
+            class="btn btn-outline-secondary btn-sm">+</button>
+        </div>
+    </div>
+
+    <!-- Remove & Total -->
+    <div class="col-md-3 text-center">
+        <p class="fw-bold">Rs. 850</p>
+        <button class="btn btn-outline-danger btn-sm"
+        onclick="removeProduct('Oil')">Remove</button>
+    </div>
+
+</div>
+<div id="cartItems"></div>
+
+<div class="container">
+   <div class="card shadow-sm p-4">
+    <h4 class="text-center mb-4">Order Summary</h4>
+
+       <div class="d-flex justify-content-between mb-2">
+        <span>Subtotal</span>
+        <span>Rs.2,300</span>
+       </div>
+       
+      <div class="d-flex justify-content-between mb-2">
+        <span>Shipping</span>
+        <span>Free</span>
+       </div>
+
+      <div class="d-flex justify-content-between mb-2">
+        <span>Total</span>
+        <span>2,300</span>
+       </div>
+
+       <button class="btn btn-primary w-100 mb-2">Proceed to Checkout</button>
+        <button class="btn btn-outline-secondary w-100">Continue Shopping</button>
+   </div>
+</div>
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js">
+</script>
+
+<script>
+    let quanlity = 1;
+    function increaseQty(){
+       quanlity++;
+
+       document.getElementById("quanlity").innerText = quanlity;
+    }
+    function decreaseQty(){
+        if (quanlity > 1){
+            quanlity--;
+
+            document.getElementById("quanlity").innerText = quanlity;
+        }
+    }
+     
+    function removeProduct(ProductId) {
+        document.getElementById(ProductId).remove();
+    }
+   
+    let cart = 
+    JSON.parse(localStorage.getItem("cart")) || [];
+
+    let cartItems = 
+    document.getElementById("cartItems");
+    cart.forEach(function(product) {
+        cartItems.innerHTML += `
+       
+    
+<div class="card cart-card mb-3">
+    <div class="row align-items-center p-3">
+         <div class="col-md-3">
+          <img src="${product.image}" class="img-fluid">
+         </div>
+         <div class="col-md-6">
+            <h5>${product.name}</h5>
+         <p>${product.price}</p>
+        
+           <button onclick="decreaseQty()" 
+            class="btn btn-outline-secondary btn-sm w-auto">-</button>
+            <span id="quanlity">1</span>
+            <button onclick="increaseQty()"
+             class="btn btn-outline-secondary btn-sm w-auto">+</button>
+            </div>
+          <div class="col-md-3">
+               <button class="btn btn-outline-danger">
+                   Remove
+               </button>
+
+          </div>
+    </div>
+</div>
+      `;
+    } );
+
+</script>
+
+</body>
+</html>

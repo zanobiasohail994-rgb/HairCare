@@ -1,0 +1,507 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css" integrity="sha512-QeR2VH+lsBE5LSAe1Q5EnTBbe7XTBubt8dG93Y7gidSgdMCr8nVqKcfKAMyN96SV8KDbZVTDXChatu5G2KQGzg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<style>
+     body{
+    background-color: #fff8fa;
+    border: 3px solid #d63384;
+    border-radius: 15px;
+    margin: 10px;
+     }
+    #mynavbar {
+      background-color: lightpink;
+      color: black;
+      text-decoration: none;
+      font-weight: 600;
+      padding: 0 15px;
+    }
+     .top-bar{
+      background-color: lightpink;
+      color: black;
+      display: flex;
+      height: 30px;
+      align-items: center;
+      padding: 0 20px;
+      font-size: 10px;
+      gap: 5px;
+      border-top-right-radius: 8px;
+      border-top-left-radius: 8px;
+    }
+    .mynavbar .nav-link{
+      margin: 0 10px;
+      font-weight: 600;
+      transition: 0.3;
+    }
+    .mynavbar .nav-link:hover{
+      color: #c2185b;
+    }
+    .navbar-brand{
+      text-decoration: none;
+      align-items: center;
+      display: flex;
+      gap: 10px;
+    }
+    .brand-logo{
+      width: 55px;
+      height: 55px;
+      object-fit: contain;
+    }
+    .brand-text{
+      display: flex;
+      flex-direction: column;
+      line-height: 1.1;
+    }
+    .brand-name{
+      font-size: 30px;
+      font-weight: 600;
+      color: #222;
+      font-family: Georgia, serif;
+    }
+    .brand-text small{
+      font-size: 13px;
+      color: #e75480;
+      margin-top: 4px;
+    }
+    .cart-icon{
+      position: relative;
+      font-size: 25px;
+      color: #222;
+      text-decoration: none;
+      margin-left: 20px;
+    }
+    .cart-icon:hover{
+      color: #e75480;
+    }
+    .cart-badge{
+      position: absolute;
+      top: -10px;
+      right: -12px;
+
+      width: 22px;
+      height: 22px;
+      background-color: #e75480;
+      color: white;
+
+      border-radius: 50%;
+      font-size: 12px;
+      
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    form[role="search"]{
+      font-weight: 800;
+      width: 500px;
+      margin: auto;
+    }
+    form[role="search"].form-control{
+      width: 350px;
+    }
+    form[role="search"] .btn{
+      width: 90px;
+    }
+     .product-heading{
+      text-align: center;
+      font-size: 38px;
+      font-weight: 700;
+      color: #b64f78;
+      margin: 40px 0 30px;
+      position: relative;
+    }
+   .Review-us{
+     background-color: #fff8fa
+    }
+    .Review-us h2{
+     align-items: center;
+      color: #c2185b;
+      font-weight: bold;
+    }
+    .Review-us p{
+      font-width: bold;
+      color: #333;
+    }
+    .card{
+      border: none;
+      border-radius: 18px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.12);
+      transition: 0.3s;
+    }
+    .card:hover{
+      transform: translateY(-7px);
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.18);
+    }
+    .card-img{
+     width: 100%;
+     height: 100%;
+     object-fit: cover;
+    }
+    .card h5{
+      color: #9b3d5c;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+    .card p{
+      color: #8b3150;
+      font-size: 15px;
+    }
+    .card .btn{
+        background-color: #d98aa5;
+        color: white;
+        border: none;
+        border-radius: 20px;
+        padding: 8px 22px;
+    }
+    .card .btn:hover{
+        background-color: #9b3d5c;
+        color: white;
+    }
+    .footer{
+      background-color: #f8dcef;
+      color: #5d4a5d;
+    }
+    .brand-name{
+      color: #c2185b;
+      font-weight: bold;
+    }
+    .tagline{
+      color: #666;
+      font-size: 16px;
+    }
+    .footer-column{
+      text-align: center;
+      border-right: 1px solid #e5a9bd;
+    }
+    .footer-column:last-child{
+      border-right: none;
+    }
+    .footer-column h5{
+      color: #c2185b;
+      margin-bottom: 15px;
+    }
+    .footer-column ul{
+      padding: 0;
+      margin: 0;
+    }
+    .footer-column li{
+      margin-bottom: 8px;
+    }
+    .footer-column a{
+      color: #c2185b;
+      font-size: 22px;
+      margin: 0 10px;
+      text-decoration: none;
+    }
+    .footer-column i{
+      color: #c2185b;
+      margin-bottom: 15px;
+    }
+    .social-section{
+      border-top: 1px solid #e5a9bd;
+    }
+    .social-section h5{
+      color: #c2185b;
+      margin-bottom: 15px;
+    }
+    .social-section a{
+      color: #c2185b;
+      font-size: 22px;
+      margin: 0 10px;
+      text-decoration: none;
+    }
+    .social-section a:hover{
+      columns: #ad1457;
+    }
+    .copyright{
+      border-top: 1px solid #e5a9bd;
+      text-align: center;
+      color: #777;
+      font-size: 14px;
+    }
+
+</style>
+<body>
+  <!-- small top nav -->
+    <div class="Top-bar">
+
+       <span><i class="fa-solid fa-phone"></i></span>
+       <span>+92 349 56693</span>
+       <span>HairCare@gmail.com</span>
+    </div>
+
+     <nav class="navbar navbar-expand-lg  bg-body-tertiary">
+  <div class="container-fluid">
+     <a class="navbar-brand" href="#">
+      <img src="websitelogo.png" alt="logo" class="brand-logo">
+    <div class="brand-text">
+      <span class="brand-name">HairCare</span>
+      <small>Beautiful Hair,Naturally</small>
+    </div>
+    </a>
+    
+      
+  <form class="d-flex" justify-content-center w-100 fw-900 role="search">
+        <input class="form-control rounded-start-pill" type="search" placeholder="Search" aria-label="Search"/>
+        <button class="btn rounded-end-pill btn-outline-danger" type="submit">
+          <i class="fa-solid fa-magnifying-glass"></i></button>
+      </form>
+      <a href="cart.html" class="cart-icon">
+      <i class="fa-solid fa-cart-shopping"></i>
+       <span class="cart-badge">2</span>
+      </a>
+  </div>
+</nav>
+
+ <!-- Main Navigation -->
+<nav class="mynavbar navbar-expand-lg" id="mynavbar">
+  <div class="container-fluid">
+
+    <!-- Mobile Toggle Button -->
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Navigation Links -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+      <ul class="navbar-nav justify-content-center w-100 mb-2 mb-lg-0">
+
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="index.html">
+            Home
+          </a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="About.html">
+            About Us
+          </a>
+        </li>
+
+         <li class="nav-item">
+          <a class="nav-link" href="Shop.html">
+            Shop
+          </a>
+        </li>
+
+        <!-- Products Dropdown -->
+         <li class="nav-item dropdown">
+          <a
+            class="nav-link dropdown-toggle"
+            href="#"
+            role="button"
+            data-bs-toggle="dropdown"
+            aria-expanded="false">
+            Product
+          </a> 
+
+          <ul class="dropdown-menu">
+            <li>
+              <a class="dropdown-item" href="shampoo.html">
+                Shampoo
+              </a>
+            </li>
+
+            <li>
+              <a class="dropdown-item" href="hairOil.html">
+                Hair Oil
+              </a>
+            </li>
+
+            <li>
+              <a class="dropdown-item" href="Conditioner.html">
+                Conditioner
+              </a>
+            </li>
+
+            <li>
+              <a class="dropdown-item" href="HairSerum.html">
+                Hair Serum
+              </a>
+            </li>
+          </ul>
+        </li>
+        
+        <li class="nav-item">
+          <a class="nav-link" href="contact.html">
+            Contact
+          </a>
+        </li>
+
+      </ul>
+
+    </div>
+  </div>
+</nav>
+
+ 
+      <section class="Review-us py-4">
+  <div class="container">
+ 
+  <div class="text-center mb-5">
+     <h2 class="heading">Our HairSerum Collection</h2>
+     <p>Find the Prefect shampoo for healthy, beautiful hair.</p>
+  </div> 
+
+  <div class="row g-4">
+   <div class="col-md-4">
+    <div class="card text-center p-4 h-100">
+   <img src="serum 1.webp" alt="Customer" class="card-img-top img-fluid">
+      <h5>HerStyler Argan Oil Hair Serum</h5>
+     <p>PKR 450</p>
+       <button class="btn btn-danger"
+      onclick="AddtoCart('Hair Care Serum',450,'serum 1.webp')">Add to Cart</button>
+    </div>
+   </div>
+
+   <div class="col-md-4">
+    <div class="card text-center p-4 h-100">
+   <img src="serum 2.jpg" alt="Customer" class="card-img-top img-fluid">
+      <h5>Loreal Paris - Elvive Extraordinary Oil Hair Serum</h5>
+     <p>PKR 550</p>
+       <button class="btn btn-danger"
+      onclick="AddtoCart('Hair Care Serum',550,'serum 2.webp')">Add to Cart</button>
+    </div>
+   </div>
+
+   <div class="col-md-4">
+    <div class="card text-center p-4 h-100">
+   <img src="serum 3.webp" alt="Customer" class="card-img-top img-fluid">
+      <h5>Hair Growth Serum Price In Pakistan</h5>
+     <p>PKR 700</p>
+      <button class="btn btn-danger"
+      onclick="AddtoCart('Hair Care Serum',700,'serum 3.webp')">Add to Cart</button>
+    </div>
+   </div>
+
+
+   <div class="col-md-4">
+    <div class="card text-center p-4 h-100">
+   <img src="serum 4.webp" alt="Customer" class="card-img-top img-fluid">
+      <h5>Top Anti Hair Loss Products to Prevent</h5>
+      <p>PKR 850</p>
+      <button class="btn btn-danger"
+      onclick="AddtoCart('Hair Care Serum',850,'serum 4.webp')">Add to Cart</button>
+    </div>
+   </div>
+
+    <div class="col-md-4">
+      <div class="card text-center p-4 h-100">
+    <img src="serum 5.webp" alt="Customer" class="card-img-top img-fluid">
+      <h5>Holiday Gift Guide For Hair Thinning & Growth</h5>
+      <p>PKR 900</p>
+      <button class="btn btn-danger"
+      onclick="AddtoCart('Hair Care Serum',900,'serum 5.webp')">Add to Cart</button>
+      </div>
+ </div>
+
+    <div class="col-md-4">
+      <div class="card text-center p-4 h-100">
+       <img src="serum 6.jpg" alt="Customer" class="card-img-top img-fluid">
+      <h5>Streax Professional Vitariche Gloss Hair Serum</h5>
+      <p>PKR 550</p>
+     <button class="btn btn-danger"
+      onclick="AddtoCart('Hair Care Serum',550,'serum 6.webp')">Add to Cart</button>
+    </div>
+  </div>
+  
+ 
+</div>
+</section>
+
+<button class="remove-btn">Remove</button>
+ 
+<footer class="footer py-5">
+   <div class="text-center mb-5">
+     <h2 class="brand-name">GLOW &amp; GROW</h2>
+       <p class="tagline">Beautiful Hair, Beautiful You</p>
+   </div>
+     <div class="row">
+      <!-- Quick-link -->
+         <div class="col-md-4 footer-column">
+         <h5>Quick-link</h5>
+          <ul class="list-unstyled">
+             <li><a href="#"></a>Home</li>
+             <li><a href="#"></a>About Us</li>
+             <li><a href="#"></a>Shop</li>
+             <li><a href="#"></a>Review</li>
+             <li><a href="#"></a>Contact</li>
+          </ul>
+
+         </div>
+         <!-- hair-care -->
+      <div class="col-md-4 footer-column">
+         <h5>Hair Care</h5>
+           <ul class="list-unstyled">
+             <li><a href="#"></a>Shampoo</li>
+             <li><a href="#"></a>Conditioner</li>
+             <li><a href="#"></a>Hair Oil</li>
+             <li><a href="#"></a>Hair Mask</li>
+             <li><a href="#"></a>Hair Serum</li>
+          </ul>
+
+         </div>
+         <!-- contact us -->
+     <div class="col-md-4 footer-column">
+         <h5>Contact Us</h5>
+        <p><i class="fa-solid fa-location-dot"></i>Karachi,Pakistan</p>
+        <p><i class="fa-solid fa-phone"></i>+92 300 1234567</p>
+       <p><i class="fa-regular fa-envelope"></i>GLOW&Grow@gmail.com</p>
+         </div>
+   
+     <div class="social-section text-center mt-4 pt-4">
+      <h5>Follow Us</h5>
+      <a href="#"><i class="fa-brands fa-instagram"></i></a>
+      <a href="#"><i class="fa-brands fa-facebook"></i></a>
+      <a href="#"><i class="fa-brands fa-tiktok"></i></a>
+     </div>
+
+     <div class="copyright mt-4 pt-3">
+      <p><i class="fa-regular fa-copyright"></i>2026 Glow & Grow All Right Reserved</p>
+    </div>
+     
+     </div>
+</footer>
+
+
+ <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
+<script>
+  function AddtoCart(name,price,image){
+    let cart =
+    JSON.parse(localStorage.getItem("cart")) ||[];
+
+    let Product = {
+      name: name,
+      price: price,
+      image: image
+    };
+    cart.push(Product);
+
+    localStorage.setItem("cart", 
+      JSON.stringify(cart));
+  
+ function removeProduct(ProductId) {
+        document.getElementById(ProductId).remove();
+    }
+   
+
+      alert("Product added to cart!")
+  }
+</script>
+
+
+</body>
+</html>
