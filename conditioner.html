@@ -225,39 +225,72 @@
     }
 </style>
 <body>
-  <!-- small top nav -->
-    <div class="Top-bar">
+ <!-- ================= TOP BAR ================= -->
+<div class="Top-bar">
+  <span>
+    <i class="fa-solid fa-phone"></i>
+  </span>
 
-       <span><i class="fa-solid fa-phone"></i></span>
-       <span>+92 349 56693</span>
-       <span>HairCare@gmail.com</span>
-    </div>
+  <span>+92 349 56693</span>
+  <span>HairCare@gmail.com</span>
+</div>
 
-     <nav class="navbar navbar-expand-lg  bg-body-tertiary">
+
+<!-- ================= MAIN NAVBAR ================= -->
+<nav class="navbar navbar-expand-lg bg-body-tertiary">
   <div class="container-fluid">
-     <a class="navbar-brand" href="#">
-      <img src="websitelogo.png" alt="logo" class="brand-logo">
-    <div class="brand-text">
-      <span class="brand-name">HairCare</span>
-      <small>Beautiful Hair,Naturally</small>
-    </div>
+
+    <!-- Logo and Brand -->
+    <a class="navbar-brand d-flex align-items-center" href="index.html">
+
+      <img
+        src="websitelogo.png"
+        alt="HairCare Logo"
+        class="brand-logo"
+      >
+
+      <div class="brand-text">
+        <span class="brand-name">HairCare</span>
+        <small>Beautiful Hair, Naturally</small>
+      </div>
+
     </a>
-    
-      
-  <form class="d-flex" justify-content-center w-100 role="search">
-        <input class="form-control rounded-start-pill" type="search" placeholder="Search" aria-label="Search"/>
-        <button class="btn rounded-end-pill btn-outline-danger" type="submit">
-          <i class="fa-solid fa-magnifying-glass"></i></button>
-      </form>
-      <a href="cart.html" class="cart-icon">
+
+
+    <!-- Search Bar -->
+    <form
+      class="d-flex justify-content-center w-100"
+      role="search"
+    >
+      <input
+        class="form-control rounded-start-pill"
+        type="search"
+        placeholder="Search"
+        aria-label="Search"
+      >
+
+      <button
+        class="btn rounded-end-pill btn-outline-danger"
+        type="submit"
+      >
+        <i class="fa-solid fa-magnifying-glass"></i>
+      </button>
+    </form>
+
+
+    <!-- Cart -->
+    <a href="cart.html" class="cart-icon" aria-label="Shopping Cart">
       <i class="fa-solid fa-cart-shopping"></i>
-       <span class="cart-badge">2</span>
-      </a>
+      <span class="cart-badge">2</span>
+    </a>
+
   </div>
 </nav>
 
-  <!-- Main Navigation -->
-<nav class="mynavbar navbar-expand-lg" id="mynavbar">
+
+<!-- ================= MAIN NAVIGATION ================= -->
+<nav class="mynavbar navbar navbar-expand-lg" id="mynavbar">
+
   <div class="container-fluid">
 
     <!-- Mobile Toggle Button -->
@@ -273,69 +306,110 @@
       <span class="navbar-toggler-icon"></span>
     </button>
 
+
     <!-- Navigation Links -->
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <div
+      class="collapse navbar-collapse"
+      id="navbarSupportedContent"
+    >
 
       <ul class="navbar-nav justify-content-center w-100 mb-2 mb-lg-0">
 
+        <!-- Home -->
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="index.html">
+          <a
+            class="nav-link active"
+            aria-current="page"
+            href="index.html"
+          >
             Home
           </a>
         </li>
 
+
+        <!-- About -->
         <li class="nav-item">
-          <a class="nav-link" href="About.html">
+          <a
+            class="nav-link"
+            href="About.html"
+          >
             About Us
           </a>
         </li>
 
-         <li class="nav-item">
-          <a class="nav-link" href="Shop.html">
+
+        <!-- Shop -->
+        <li class="nav-item">
+          <a
+            class="nav-link"
+            href="Shop.html"
+          >
             Shop
           </a>
         </li>
 
+
         <!-- Products Dropdown -->
-         <li class="nav-item dropdown">
+        <li class="nav-item dropdown">
+
           <a
             class="nav-link dropdown-toggle"
             href="#"
             role="button"
             data-bs-toggle="dropdown"
-            aria-expanded="false">
-            Product
-          </a> 
+            aria-expanded="false"
+          >
+            Products
+          </a>
 
           <ul class="dropdown-menu">
+
             <li>
-              <a class="dropdown-item" href="shampoo.html">
+              <a
+                class="dropdown-item"
+                href="shampoo.html"
+              >
                 Shampoo
               </a>
             </li>
 
             <li>
-              <a class="dropdown-item" href="hairOil.html">
+              <a
+                class="dropdown-item"
+                href="hairOil.html"
+              >
                 Hair Oil
               </a>
             </li>
 
             <li>
-              <a class="dropdown-item" href="Conditioner.html">
+              <a
+                class="dropdown-item"
+                href="Conditioner.html"
+              >
                 Conditioner
               </a>
             </li>
 
             <li>
-              <a class="dropdown-item" href="HairSerum.html">
+              <a
+                class="dropdown-item"
+                href="HairSerum.html"
+              >
                 Hair Serum
               </a>
             </li>
+
           </ul>
         </li>
 
+
+        <!-- Contact -->
         <li class="nav-item">
-          <a class="nav-link" href="contact.html">
+          <a
+            class="nav-link"
+            href="contact.html"
+          >
             Contact
           </a>
         </li>
@@ -346,28 +420,49 @@
   </div>
 </nav>
 
-     <section class="review-us py-4">
+
+<!-- ================= CONDITIONER SECTION ================= -->
+<section class="review-us py-4">
+
   <div class="container">
 
     <!-- Section Heading -->
     <div class="text-center mb-5">
-      <h2 class="heading">Our Conditioner Collection</h2>
-      <p>Find the perfect conditioner for healthy, beautiful hair.</p>
+
+      <h2 class="heading">
+        Our Conditioner Collection
+      </h2>
+
+      <p>
+        Find the perfect conditioner for healthy, beautiful hair.
+      </p>
+
     </div>
+
 
     <!-- Products -->
     <div class="row g-4">
 
-      <!-- Product 1 -->
+
+      <!-- PRODUCT 1 -->
       <div class="col-md-4">
+
         <div class="card text-center p-4 h-100">
+
           <img
             src="conditioner.webp"
             alt="Bremod Keratin Shampoo and Conditioner"
             class="card-img-top img-fluid"
           >
-          <h5>Bremod Keratin Shampoo &amp; Conditioner</h5>
-          <p>PKR 1,350</p>
+
+          <h5>
+            Bremod Keratin Shampoo &amp; Conditioner
+          </h5>
+
+          <p>
+            PKR 1,350
+          </p>
+
           <button
             type="button"
             class="btn btn-danger"
@@ -375,19 +470,31 @@
           >
             Add to Cart
           </button>
+
         </div>
+
       </div>
 
-      <!-- Product 2 -->
+
+      <!-- PRODUCT 2 -->
       <div class="col-md-4">
+
         <div class="card text-center p-4 h-100">
+
           <img
             src="conditioner2.webp"
             alt="Tresemme Keratin Smooth Conditioner"
             class="card-img-top img-fluid"
           >
-          <h5>Tresemme Keratin Smooth Conditioner</h5>
-          <p>PKR 2,500</p>
+
+          <h5>
+            Tresemme Keratin Smooth Conditioner
+          </h5>
+
+          <p>
+            PKR 2,500
+          </p>
+
           <button
             type="button"
             class="btn btn-danger"
@@ -395,19 +502,31 @@
           >
             Add to Cart
           </button>
+
         </div>
+
       </div>
 
-      <!-- Product 3 -->
+
+      <!-- PRODUCT 3 -->
       <div class="col-md-4">
+
         <div class="card text-center p-4 h-100">
+
           <img
             src="conditioner6.webp"
             alt="Dove Shampoo and Conditioner"
             class="card-img-top img-fluid"
           >
-          <h5>Dove Shampoo and Conditioner</h5>
-          <p>PKR 3,150</p>
+
+          <h5>
+            Dove Shampoo and Conditioner
+          </h5>
+
+          <p>
+            PKR 3,150
+          </p>
+
           <button
             type="button"
             class="btn btn-danger"
@@ -415,19 +534,31 @@
           >
             Add to Cart
           </button>
+
         </div>
+
       </div>
 
-      <!-- Product 4 -->
+
+      <!-- PRODUCT 4 -->
       <div class="col-md-4">
+
         <div class="card text-center p-4 h-100">
+
           <img
             src="conditioner 4.webp"
             alt="L'Oreal Paris Elvive Pure Conditioner"
             class="card-img-top img-fluid"
           >
-          <h5>L'Oreal Paris Elvive Pure Conditioner</h5>
-          <p>PKR 1,350</p>
+
+          <h5>
+            L'Oreal Paris Elvive Pure Conditioner
+          </h5>
+
+          <p>
+            PKR 1,350
+          </p>
+
           <button
             type="button"
             class="btn btn-danger"
@@ -435,19 +566,31 @@
           >
             Add to Cart
           </button>
+
         </div>
+
       </div>
 
-      <!-- Product 5 -->
+
+      <!-- PRODUCT 5 -->
       <div class="col-md-4">
+
         <div class="card text-center p-4 h-100">
+
           <img
             src="conditioner 7.webp"
             alt="Dove Shampoo and Pure Conditioner"
             class="card-img-top img-fluid"
           >
-          <h5>Dove Shampoo and Pure Conditioner</h5>
-          <p>PKR 2,500</p>
+
+          <h5>
+            Dove Shampoo and Pure Conditioner
+          </h5>
+
+          <p>
+            PKR 2,500
+          </p>
+
           <button
             type="button"
             class="btn btn-danger"
@@ -455,19 +598,31 @@
           >
             Add to Cart
           </button>
+
         </div>
+
       </div>
 
-      <!-- Product 6 -->
+
+      <!-- PRODUCT 6 -->
       <div class="col-md-4">
+
         <div class="card text-center p-4 h-100">
+
           <img
             src="conditioner6.webp"
             alt="L'Oreal Paris Elvive Pure Conditioner"
             class="card-img-top img-fluid"
           >
-          <h5>L'Oreal Paris Elvive Pure Conditioner</h5>
-          <p>PKR 2,550</p>
+
+          <h5>
+            L'Oreal Paris Elvive Pure Conditioner
+          </h5>
+
+          <p>
+            PKR 2,550
+          </p>
+
           <button
             type="button"
             class="btn btn-danger"
@@ -475,11 +630,15 @@
           >
             Add to Cart
           </button>
+
         </div>
+
       </div>
 
     </div>
+
   </div>
+
 </section>
 
 
